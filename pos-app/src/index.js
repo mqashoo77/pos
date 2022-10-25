@@ -6,9 +6,9 @@ import App from './App';
 
 //css files
 
-import "./app.css"
-import './popupComponants/category.css'
-import "../node_modules/@fortawesome/fontawesome-free/css/all.css"
+// import "./app.css"
+// import './popupComponants/category.css'
+// import "../node_modules/@fortawesome/fontawesome-free/css/all.css"
 
 
 
