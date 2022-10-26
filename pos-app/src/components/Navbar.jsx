@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM  from 'react-dom';
 import { Link } from 'react-router-dom';
 //css
-import './Navbar.css'
+import '../assets/Navbar.css'
 class Navbar extends Component {
   state = {  } 
   render() { 
