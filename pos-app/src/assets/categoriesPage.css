@@ -1,0 +1,72 @@
+.main-container{
+    width: 95%;
+    height: 90%;
+    background-color: #34495e;
+    border-radius: 15px;
+
+}
+
+.category-add-search{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.category-add-search button{
+    font-weight: 100;
+    font-size: 1.5em;
+}
+ /* table */
+ .table-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    padding: 0;
+    
+ }
+ table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: start;
+}
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.action-button{
+    display: flex;
+    justify-content: space-around;
+
+}
+.action-button button{
+    background-color: transparent;
+    font-weight: 100;
+    font-size: 1.5em;
+    border: 1px solid white ;
+    cursor: pointer;
+   
+}
+
+.action-button .edit-btn i:hover{
+    color: aqua;
+}
+
+.action-button .trash-btn i:hover{
+    color: red;
+}
