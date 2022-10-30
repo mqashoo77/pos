@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 ///css
-import '../../assets/modals/categoryForm.css'
+import '../../assets/components/modals/categoryForm.css'
 import datetime from "../../utils/datetime";
 
 
