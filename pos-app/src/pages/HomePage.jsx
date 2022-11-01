@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar";
 ///// Pages
 import PosPage from './PosPage';
 import Categories from './CategoriesPage';
-import Products from './ProductsPage';
+import ProductsPage from './ProductsPage';
 
 class Home extends Component {
   constructor(props) {
@@ -35,8 +35,7 @@ class Home extends Component {
         <Navbar></Navbar>
         <Layout signOut={this.signOut}></Layout>
         <main>
-            <Categories/>
-           
+          <ProductsPage></ProductsPage>
         </main>
       </React.Fragment>
     );

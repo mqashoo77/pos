@@ -6,7 +6,9 @@ function ProductsTable({
     setProductFormPopModal,
     setDeleteProductConfirmPopModel,
     setProductDescriptionPopModal,
-    setProductId
+    setProductId,
+    productsFilter,
+    productSearchValue,
 
 }) {
   return (
@@ -23,53 +25,110 @@ function ProductsTable({
             <th>TAX %</th>
             <th>Action</th>
           </tr>
+          
         </thead>
-        <tbody>
-            {products.map((product) => (
-                <tr key={product.id}>
-                  <td><div>
-                  <img src={product.productImg}/>
-                    </div></td>
-                  <td>{product.productCode}</td>
-                  <td>{product.productName}</td>
-                  <td>{product.productCategory}</td>
-                  <td className='action-button'>
-                    <button
-                      className="edit-btn"
-                      onClick={()=>{setProductDescriptionPopModal(true)
-                        setProductId(product.id)
+        
+        <tbody>{productSearchValue.length > 0 
+            ?
+            productsFilter.map((product) => (
+              <tr key={product.id}>
+                <td><div>
+                <img src={product.productImg} width={60} loading="lazy"/>
+                  </div></td>
+                <td>{product.productCode}</td>
+                <td>{product.productName}</td>
+                <td>{product.productCategory}</td>
+                <td className='action-button'>
+                  <button
+                    className="edit-btn"
+                    onClick={()=>{setProductDescriptionPopModal(true)
+                      setProductId(product.id)
+                    }}
+                  >
+                    <span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                  </button></td>
+                <td>{product.productPrice}</td>
+                <td>{product.productTax}</td>
+                <td className="action-button">
+                  <button
+                    className="edit-btn"
+                    onClick={() => {setProductFormPopModal(true)
+                          setProductId(product.id)
                       }}
-                    >
-                      <span>
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                      </span>
-                    </button></td>
-                  <td>{product.productPrice}</td>
-                  <td>{product.productTax}</td>
-                  <td className="action-button">
-                    <button
-                      className="edit-btn"
-                      onClick={() => {setProductFormPopModal(true)
-                            setProductId(product.id)
-                        }}
-                    >
-                      <span>
-                        <i className="fa-solid fa-pen-to-square"></i>
-                      </span>
-                    </button>
-                    <button
-                      className="trash-btn"
-                    
-                    >
-                      <span>
-                        <i className="fa-solid fa-trash"></i>
-                      </span>
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                  >
+                    <span>
+                      <i className="fa-solid fa-pen-to-square"></i>
+                    </span>
+                  </button>
+                  <button
+                    className="trash-btn"
+                    onClick={() => {setDeleteProductConfirmPopModel(true)
+                      setProductId(product.id)
+                  }}
+                  
+                  >
+                    <span>
+                      <i className="fa-solid fa-trash"></i>
+                    </span>
+                  </button>
+                </td>
+              </tr>
+            ))  
+            :
+            products.map((product) => (
+              <tr key={product.id}>
+                <td><div>
+                <img src={product.productImg}/>
+                  </div></td>
+                <td>{product.productCode}</td>
+                <td>{product.productName}</td>
+                <td>{product.productCategory}</td>
+                <td className='action-button'>
+                  <button
+                    className="edit-btn"
+                    onClick={()=>{setProductDescriptionPopModal(true)
+                      setProductId(product.id)
+                    }}
+                  >
+                    <span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                  </button></td>
+                <td>{product.productPrice}</td>
+                <td>{product.productTax}</td>
+                <td className="action-button">
+                  <button
+                    className="edit-btn"
+                    onClick={() => {setProductFormPopModal(true)
+                          setProductId(product.id)
+                      }}
+                  >
+                    <span>
+                      <i className="fa-solid fa-pen-to-square"></i>
+                    </span>
+                  </button>
+                  <button
+                    className="trash-btn"
+                    onClick={() => {setDeleteProductConfirmPopModel(true)
+                      setProductId(product.id)
+                  }}
+                  
+                  >
+                    <span>
+                      <i className="fa-solid fa-trash"></i>
+                    </span>
+                  </button>
+                </td>
+              </tr>
+            ))}
+            
         </tbody>
     </table>
+    <div>
+                <img src={require("../assets/img/01001.jpg")} width={60}/>
+                  </div>
     </div>
   )
 }
