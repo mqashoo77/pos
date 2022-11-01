@@ -16,6 +16,7 @@ function ProductsPage() {
     useState(false);
   const [productId, setProductId] = useState(false);
   const [categories, setCategories] = useState(null);
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -35,6 +36,21 @@ function ProductsPage() {
     deleteProductConfirmPopModel,
     productDescriptionPopModal,
   ]);
+  const [productSearchValue, setProductSearchValue] = useState("");
+  const [productsFilter, setProductsFilter] = useState([]);
+  function search(e) {
+    if (e.target.value != "") {
+      setProductSearchValue(e.target.value);
+      const filterProducts = products.filter((o) =>
+        Object.keys(o).some((k) =>
+          String(o[k]).toLowerCase().includes(e.target.value.toLowerCase())
+        )
+      );
+      setProductsFilter(filterProducts);
+    } else {
+      setProductSearchValue(e.target.value);
+    }
+  }
   return (
     <div className="main-container">
       <div className="product-add-search">
@@ -49,6 +65,8 @@ function ProductsPage() {
             name="product-search"
             id="product-search"
             placeholder="Search"
+            value={productSearchValue}
+            onChange={search}
           />
         </div>
       </div>
@@ -59,6 +77,8 @@ function ProductsPage() {
         setDeleteProductConfirmPopModel={setDeleteProductConfirmPopModel}
         setProductDescriptionPopModal={setProductDescriptionPopModal}
         setProductId={setProductId}
+        productsFilter={productsFilter}
+        productSearchValue={productSearchValue}
       ></ProductsTable>
       <ProductPageModals
         productFormPopModel={productFormPopModel}
