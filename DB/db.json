@@ -1,0 +1,128 @@
+{
+  "categories": [
+    {
+      "categoryName": "Beef Burger Meals",
+      "categoryCreat": "2022-10-29 10:24:22",
+      "id": 1
+    },
+    {
+      "categoryName": "Chicken Burger Meals",
+      "categoryCreat": "2022-10-29 3:10:31",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productImg": "../assets/img/1.png",
+      "productCode": "01001",
+      "productName": "Classic Beef Burger",
+      "productCategory": "Beef Burger Meals",
+      "productDescription": "150 gm grilled meat, lettuce, tomatoes, pickles, onions, cheddar cheese slices, orgada sauce.",
+      "productPrice": "29.00",
+      "productTax": "10"
+    },
+    {
+      "id": 2,
+      "productImg": "",
+      "productCode": "01002",
+      "productName": "Texas Beef Burger",
+      "productCategory": "Beef Burger Meals",
+      "productDescription": "150 gm grilled meat, lettuce, tomatoes, pickles, two onion rings, nachos, covered with melted cheddar cheese, orgada sauce.",
+      "productPrice": "31.00",
+      "productTax": "10"
+    },
+    {
+      "id": 3,
+      "productImg": "",
+      "productCode": "01003",
+      "productName": "Milano beef Burger",
+      "productCategory": "Beef Burger Meals",
+      "productDescription": "150 gm grilled meat, lettuce, tomatoes, pickles, caramelized onions, two mozzarella fingers, roast beef, orgada sauce.",
+      "productPrice": "34.00",
+      "productTax": "10"
+    },
+    {
+      "id": 4,
+      "productImg": "",
+      "productCode": "02001",
+      "productName": "Chicken Burger",
+      "productCategory": "Chicken Burger Meals",
+      "productDescription": "150 gm chicken burger, lettuce, tomatoes, pickles, smoked cheese, fresh mushrooms, white mushroom sauce, orgada sauce.",
+      "productPrice": "27.00",
+      "productTax": "10"
+    },
+    {
+      "id": 5,
+      "productImg": "",
+      "productCode": "02002",
+      "productName": "Chicken Mushroom Burger",
+      "productCategory": "Chicken Burger Meals",
+      "productDescription": "Crispy chicken breast, lettuce, pickles, smoked cheese, fresh mushroom, white mushroom sauce, orgada sauce.",
+      "productPrice": "29.00",
+      "productTax": "10"
+    },
+    {
+      "id": 6,
+      "productImg": "",
+      "productCode": "02003",
+      "productName": "Royal Chicken Burger",
+      "productCategory": "Chicken Burger Meals",
+      "productDescription": "Grilled chicken breast , lettuce , tomato, pickles, sauce.",
+      "productPrice": "29.00",
+      "productTax": "10"
+    },
+    {
+      "productImg": "C:\\fakepath\\1608948700659.png",
+      "productCode": "02003",
+      "productName": "hello",
+      "productCategory": "",
+      "productDescription": "sadas",
+      "productPrice": "10",
+      "productTax": "10",
+      "id": 7
+    },
+    {
+      "productImg": "C:\\fakepath\\1608948700659.png",
+      "productCode": "10",
+      "productName": "45454",
+      "productCategory": "",
+      "productDescription": "54564564",
+      "productPrice": "45",
+      "productTax": "10",
+      "id": 8
+    },
+    {
+      "productImg": "",
+      "productCode": "123",
+      "productName": "abc",
+      "productCategory": "",
+      "productDescription": "abcabc",
+      "productPrice": "20.00",
+      "productTax": "10",
+      "ProductCategory": "Chicken Burger Meals",
+      "id": 9
+    },
+    {
+      "productImg": "",
+      "productCode": "1",
+      "productName": "12",
+      "productCategory": "",
+      "productDescription": "123",
+      "productPrice": "12",
+      "productTax": "12",
+      "ProductCategory": "Chicken Burger Meals",
+      "id": 10
+    },
+    {
+      "productImg": "",
+      "productCode": "sadsa",
+      "productName": "asfas",
+      "productCategory": "Chicken Burger Meals",
+      "productDescription": "asffa",
+      "productPrice": "asfas",
+      "productTax": "asfsa",
+      "id": 11
+    }
+  ]
+}
