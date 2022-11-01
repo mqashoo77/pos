@@ -4,7 +4,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 // import getCategories from './../../utils/categories';
 
-function ProductForm({ productId, setProductId, setProductFormPopModal,categories }) {
+function ProductForm({
+  productId,
+  setProductId,
+  setProductFormPopModal,
+  categories,
+}) {
   // const [productCode, setProductCode] = useState("");
   // const [productName, setProductName] = useState("");
   // const [productCategory, setProductCategory] = useState("");
@@ -42,8 +47,6 @@ function ProductForm({ productId, setProductId, setProductFormPopModal,categorie
     setProductFormPopModal(false);
   }
   useEffect(() => {
-    console.log("First call on mount..");
-
     const getData = async () => {
       if (productId !== false) {
         const { data } = await axios.get(
@@ -95,7 +98,12 @@ function ProductForm({ productId, setProductId, setProductFormPopModal,categorie
               onChange={handleCahnge}
             >
               {categories.map((category) => (
-                <option key={category.categoryName} value={category.categoryName}>{category.categoryName}</option>
+                <option
+                  key={category.categoryName}
+                  value={category.categoryName}
+                >
+                  {category.categoryName}
+                </option>
               ))}
             </select>
           </div>
