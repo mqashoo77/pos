@@ -2,10 +2,11 @@ import React from 'react'
 import { Modal } from 'antd';
 
 import ProductForm from "./modals/productForm.jsx"
-import Categories from './../pages/CategoriesPage';
+import ProductDescription from "./modals/productDescription"
 
 function ProductPageModals(
   {
+    products,
     productFormPopModel,
     setProductFormPopModal,
     deleteProductConfirmPopModel,
@@ -14,10 +15,12 @@ function ProductPageModals(
     setProductDescriptionPopModal,
     productId,
     setProductId,
-    categories
+    categories,
+  
   }
 ) {
   return (
+    <div>
     <div>
       {
       productFormPopModel && (
@@ -43,7 +46,30 @@ function ProductPageModals(
      
     }
     </div>
+    <div>
+    {
+    productDescriptionPopModel && (
+      <Modal
+      title="Product Description"
+            open={productDescriptionPopModel}
+      onCancel={() => {
+        setProductDescriptionPopModal(false);
+        setProductId(false);
+      }}
+      footer={null}
+    >
+      <ProductDescription
+        products={products}
+        productId={productId}
+      >
+     
+      </ProductDescription>
+    </Modal>
+    )
    
+  }
+  </div>
+   </div>
   )
 }
 
