@@ -14,7 +14,7 @@
   "products": [
     {
       "id": 1,
-      "productImg": "../assets/img/1.png",
+      "productImg": "../assets/img/01001.jpg",
       "productCode": "01001",
       "productName": "Classic Beef Burger",
       "productCategory": "Beef Burger Meals",
@@ -71,58 +71,6 @@
       "productDescription": "Grilled chicken breast , lettuce , tomato, pickles, sauce.",
       "productPrice": "29.00",
       "productTax": "10"
-    },
-    {
-      "productImg": "C:\\fakepath\\1608948700659.png",
-      "productCode": "02003",
-      "productName": "hello",
-      "productCategory": "",
-      "productDescription": "sadas",
-      "productPrice": "10",
-      "productTax": "10",
-      "id": 7
-    },
-    {
-      "productImg": "C:\\fakepath\\1608948700659.png",
-      "productCode": "10",
-      "productName": "45454",
-      "productCategory": "",
-      "productDescription": "54564564",
-      "productPrice": "45",
-      "productTax": "10",
-      "id": 8
-    },
-    {
-      "productImg": "",
-      "productCode": "123",
-      "productName": "abc",
-      "productCategory": "",
-      "productDescription": "abcabc",
-      "productPrice": "20.00",
-      "productTax": "10",
-      "ProductCategory": "Chicken Burger Meals",
-      "id": 9
-    },
-    {
-      "productImg": "",
-      "productCode": "1",
-      "productName": "12",
-      "productCategory": "",
-      "productDescription": "123",
-      "productPrice": "12",
-      "productTax": "12",
-      "ProductCategory": "Chicken Burger Meals",
-      "id": 10
-    },
-    {
-      "productImg": "",
-      "productCode": "sadsa",
-      "productName": "asfas",
-      "productCategory": "Chicken Burger Meals",
-      "productDescription": "asffa",
-      "productPrice": "asfas",
-      "productTax": "asfsa",
-      "id": 11
     }
   ]
 }
