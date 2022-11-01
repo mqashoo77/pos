@@ -33,8 +33,12 @@ function ProductsTable({
                   <td>{product.productCode}</td>
                   <td>{product.productName}</td>
                   <td>{product.productCategory}</td>
-                  <td className='action-button'><button
+                  <td className='action-button'>
+                    <button
                       className="edit-btn"
+                      onClick={()=>{setProductDescriptionPopModal(true)
+                        setProductId(product.id)
+                      }}
                     >
                       <span>
                       <i class="fa-solid fa-arrow-up-right-from-square"></i>
