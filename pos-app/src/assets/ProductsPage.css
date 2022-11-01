@@ -1,0 +1,107 @@
+.main-container {
+    width: 95%;
+    height: 90%;
+    background-color: #34495e;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .product-add-search {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+  }
+  .product-add button {
+    cursor: pointer;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #00c9a7;
+    color: white;
+    font-size: 1rem;
+    transition-duration: 0.5s;
+
+  }
+  .product-add button:hover {
+    background-color: #008B74;
+  }
+
+  .product-add button i {
+    color: inherit
+    
+  }
+  .product-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem ;
+  }
+
+  .product-search input{
+    border: 0px;
+    border-radius: 10px;
+    background-color: #00c9a7;
+    color: white;
+}
+/* table */
+.table-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  padding: 0;
+  width: 60%;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  
+}
+
+table th {
+  font-size: .6rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 12.5%;
+  height: 50px;
+}
+table td {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 0px;
+  border-top: 2px solid #34495e;
+}
+
+.action-button {
+}
+.action-button button {
+  background-color: transparent;
+  font-weight: 100;
+  font-size: 1.5em;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.action-button .edit-btn i:hover {
+  color: aqua;
+}
+
+.action-button .trash-btn i:hover {
+  color: red;
+}

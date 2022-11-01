@@ -1,13 +1,35 @@
+@import '~antd/dist/antd.css';
+
 *{
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth; 
-    color: #3a6cf4;
+    color: #00c9a7
     
 }
 
 body{
     height: 100vh;
+}
+#root{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 90%;
+    height: 95%;
+    margin-left:10%;
+    margin-top: 0px;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    background-color: #2c3e50;
 }
