@@ -1,21 +1,22 @@
 import React, { Component } from "react";
-import ReactDOM  from 'react-dom';
-import { Link } from 'react-router-dom';
+import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 //css
-import '../assets/Navbar.css'
+import "../assets/Navbar.css";
 class Navbar extends Component {
-  state = {  } 
-  render() { 
+  state = {};
+  render() {
     return (
       <header>
-      <Link to="/" className="logo">cool POS</Link>
-      <nav className="navigation">  
-      </nav>
-    </header>
+        <div className="header-container">
+          <Link to="/" className="logo">
+            cool POS
+          </Link>
+          <nav className="navigation"></nav>
+        </div>
+      </header>
     );
   }
 }
- 
 
 export default Navbar;
-
