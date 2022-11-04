@@ -3,6 +3,8 @@ import "../assets/posPage.css";
 import CategoryItem from "../components/categoryItem.jsx";
 import ProductItem from "../components/productItem.jsx";
 import OrderList from "../components/orderList.jsx";
+import OrderBill from "./../components/orderBill";
+import OrderPaymentProcess from "./../components/orderPaymentProcess";
 
 
 import { useState, useEffect } from "react";
@@ -103,7 +105,11 @@ function PosPage() {
               <OrderList order={order} setOrder={setOrder} />
             </ul>
           </div>
-         
+          <div className="order-list-payment-info">
+            <OrderBill></OrderBill>
+            <OrderPaymentProcess></OrderPaymentProcess>
+          </div>
+
 
           
         </div>
