@@ -6,8 +6,11 @@ function OrderList({order,setOrder}) {
     function handleUpdateOrder(item){
       setOrder([...order]);
     }
-    
-
+    function handleDeleteItem(item){
+      const index = order.indexOf(item);
+      order.splice(index, 1);
+      setOrder([...order]);
+    }
   return (
     <div>
         {order.map(item => (
