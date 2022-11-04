@@ -32,11 +32,15 @@ class Home extends Component {
     }
     return (
       <React.Fragment>
-        <Navbar></Navbar>
+       
         <Layout signOut={this.signOut}></Layout>
+        <Navbar></Navbar>
         <main>
-          <ProductsPage></ProductsPage>
+          <PosPage>
+            
+          </PosPage>
         </main>
+        
       </React.Fragment>
     );
   }
