@@ -60,11 +60,11 @@ function Categories() {
         <button onClick={() => setPopModel(true)}>Add Category</button>
 
         <div className="category-search">
-          <label forhtml="category-search">Search</label>
           <input
             type="text"
             name="category-search"
             id="category-search"
+            placeholder="Search"
             value={categorySearchValue}
             onChange={filterData}
           />
