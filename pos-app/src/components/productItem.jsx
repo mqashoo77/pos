@@ -18,19 +18,17 @@ function ProductItem({productName, productPrice ,productTax,productImg,order,set
 
   }
 
-   
- 
   return (
     <div className="product-wrapper" onClick={handle}>
             <div className="product-img" >
               <img
-                src={require("../assets/img/01001.jpg")}
+                src={productImg}
               />
             </div>
             <div className="product-info">
               <h1>{productName}</h1>
               <strong>
-                <span>{productPrice}</span>
+                <span>{productPrice} $</span>
               </strong>
             </div>
           </div>
