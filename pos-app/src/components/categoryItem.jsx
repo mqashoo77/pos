@@ -3,7 +3,7 @@ import React from "react";
 function CategoryItem({ categoryName, selectCategoty, setSelectCategoty,choseCategory}) {
   const handle = (e) => {
     setSelectCategoty(categoryName)
-    choseCategory()
+    // choseCategory()
   };
 
   return (
