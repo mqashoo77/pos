@@ -10,6 +10,7 @@ import PageNotFound from "./pages/404Page";
 import PosPage from "./pages/PosPage";
 import CategoriesPage from "./pages/CategoriesPage";
 import ProductsPage from "./pages/ProductsPage";
+import PrivateRoute from "./utils/PrivateRoute";
 
 //components
 
@@ -19,8 +20,10 @@ function App() {
       <React.Fragment>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/404" element={<PageNotFound />} />
+          <Route element={<PrivateRoute/>}>
+                <Route exact path="/*" element={<Home/>} />
+          </Route>
+          {/* <Route path="/404" element={<PageNotFound />} /> */}
         </Routes>
       </React.Fragment>
     </BrowserRouter>
