@@ -27,7 +27,8 @@ class LoginPage extends Component {
   login = event => {
     let user_id = this.state.loginParams.user_id;
     let user_password = this.state.loginParams.user_password;
-    if (user_id === "admin" && user_password === "123") {
+    
+    if (user_id === "admin" && user_password === "admin") {
       localStorage.setItem("token", "T");
       this.setState({
         islogged: true
@@ -43,24 +44,27 @@ class LoginPage extends Component {
       <div className="container">
         <form onSubmit={this.login} className="form-signin">
           <h1>Please sign in</h1>
-          <div className="row">
-            <div className="col">
+          
               <input
+              className="login-input"
                 type="text"
                 name="user_id"
                 onChange={this.handleFormChange}
                 placeholder="Enter Username"
               />
               <input
+               className="login-input"
                 type="password"
                 name="user_password"
                 onChange={this.handleFormChange}
                 placeholder="Enter Password"
               />
-              <input type="submit" value="Login" />
-            </div>
-          </div>
+              {/* <input type="submit" value="Login" /> */}
+              <button  className="login-button" type="submit"> Log in</button>
+              <h6>admin - admin</h6>
+           
         </form>
+       
       </div>
     );
   }
