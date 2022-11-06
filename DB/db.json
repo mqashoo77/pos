@@ -14,7 +14,7 @@
   "products": [
     {
       "id": 1,
-      "productImg": "../assets/img/01001.jpg",
+      "productImg": "./img/01001.jpg",
       "productCode": "01001",
       "productName": "Classic Beef Burger",
       "productCategory": "Beef Burger Meals",
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "productImg": "",
+      "productImg": "./img/01002.jpg",
       "productCode": "01002",
       "productName": "Texas Beef Burger",
       "productCategory": "Beef Burger Meals",
@@ -34,7 +34,7 @@
     },
     {
       "id": 3,
-      "productImg": "",
+      "productImg": "./img/01003.jpg",
       "productCode": "01003",
       "productName": "Milano beef Burger",
       "productCategory": "Beef Burger Meals",
@@ -44,7 +44,7 @@
     },
     {
       "id": 4,
-      "productImg": "",
+      "productImg": "./img/02001.jpg",
       "productCode": "02001",
       "productName": "Chicken Burger",
       "productCategory": "Chicken Burger Meals",
@@ -54,7 +54,7 @@
     },
     {
       "id": 5,
-      "productImg": "",
+      "productImg": "./img/02002.jpg",
       "productCode": "02002",
       "productName": "Chicken Mushroom Burger",
       "productCategory": "Chicken Burger Meals",
@@ -64,7 +64,7 @@
     },
     {
       "id": 6,
-      "productImg": "",
+      "productImg": "./img/02003.jpg",
       "productCode": "02003",
       "productName": "Royal Chicken Burger",
       "productCategory": "Chicken Burger Meals",
