@@ -1,59 +1,36 @@
-aside{
-    height: 95% ;
-    width: 10%;
-    position: fixed;
+.aside-container{
+    width: 80%;
+    height: 96%;
     background-color: #2c3e50;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
-    
+    border-radius: 15px;
+
 }
-
 .nav-btn{
-
-   
-    height: fit-content;
+    min-height: 500px;
     display: flex;
-    width: 80%;
     flex-direction: column;
-    gap: 50px;
-
+    align-items: center;
+    justify-content: space-around;
 }
 .nav-btn button{
-    background-color:#34495e;
-    border: none;
     cursor: pointer;
-    font-weight: 100;
-    font-size: 1.5em;
+    background-color:#2c3e50;
+    border: none;
     border-radius: 15px;   
     transition-duration: 0.5s ;
+    padding: 10px;
+    transform: 0.7s;
+    
+}
+.nav-btn button span,h6{
+    color: #00c9a7;
     
 }
 .nav-btn button:hover{
-    box-shadow: 0px 3px 3px  #888888;
-
-}
-
-.logout-btn{
-    margin-top: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-weight: 100;
-    font-size: 1.5em;
-    
-}
-.logout-btn button{
-
-    background-color:#34495e;
-    border: none;
-    cursor: pointer;
-    font-weight: 100;
-    font-size: 1em;
-    border-radius: 15px;   
-    transition-duration: 0.5s ;
+   transform: scale(1.1);
 
 }

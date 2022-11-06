@@ -1,13 +1,4 @@
-.main-container {
-    width: 95%;
-    height: 90%;
-    background-color: #34495e;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
+
   
   .product-add-search {
     width: 100%;
@@ -43,10 +34,11 @@
   }
 
   .product-search input{
-    border: 0px;
-    border-radius: 10px;
-    background-color: #00c9a7;
-    color: white;
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0px solid #00c9a7;
 }
 /* table */
 .table-section {
@@ -84,6 +76,12 @@ table td {
   text-align: center;
   padding: 5px 0px;
   border-top: 2px solid #34495e;
+}
+table td img{
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
 }
 
 .action-button {
