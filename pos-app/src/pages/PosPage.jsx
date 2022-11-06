@@ -32,8 +32,8 @@ function PosPage() {
     getData();
     getCategories();
   }, []);
-
-  function choseCategory() {
+  
+  useEffect(() => {
     if (selectCategoty != "All") {
       const filterProducts = products.filter((o) =>
         Object.keys(o).some((k) =>
@@ -42,7 +42,18 @@ function PosPage() {
       );
       setCategoryProducts(filterProducts);
     }
-  }
+  }, [selectCategoty]);
+
+  // function choseCategory() {
+  //   if (selectCategoty != "All") {
+  //     const filterProducts = products.filter((o) =>
+  //       Object.keys(o).some((k) =>
+  //         String(o[k]).toLowerCase().includes(selectCategoty.toLowerCase())
+  //       )
+  //     );
+  //     setCategoryProducts(filterProducts);
+  //   }
+  // }
 
   return (
     <div className="main-container-posPage">
@@ -64,7 +75,7 @@ function PosPage() {
               categoryName={category.categoryName}
               selectCategoty={selectCategoty}
               setSelectCategoty={setSelectCategoty}
-              choseCategory={choseCategory}
+              // choseCategory={choseCategory}
             />
           ))}
         </div>
@@ -106,12 +117,9 @@ function PosPage() {
             </ul>
           </div>
           <div className="order-list-payment-info">
-            <OrderBill></OrderBill>
+            <OrderBill order={order}></OrderBill>
             <OrderPaymentProcess></OrderPaymentProcess>
           </div>
-
-
-          
         </div>
         </div>
       </div>
