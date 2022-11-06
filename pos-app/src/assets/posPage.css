@@ -1,0 +1,361 @@
+.main-container-posPage {
+    width: 98%;
+    height: 95%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: #2c3e50;
+  }
+.menu-container{
+    width:75%;
+    height:100%;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10px;
+
+}
+
+
+.menu-header{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.menu-header h1{
+    color: #00c9a7;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.menu-header-search{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+.menu-header-search i{
+   position: absolute;
+}
+.menu-header-search .icon{
+    padding: 10px;
+    min-width: 40px;
+ }
+
+.menu-header-search input{
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0px solid #00c9a7;
+}
+
+.menu-categories{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+  
+}
+
+.category-wrapper{
+    cursor: pointer;
+    width:fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.category-name{
+    width: 200px;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:red;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
+    
+}
+
+.category-name h1{
+    color: white;
+    text-align: center;
+}
+.m{
+  padding-left: 100px;
+  width: 100%;
+  color: #00c9a7;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+/* Product Item Styling */
+.menu-product{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: safe;  
+    border-radius: 0px 0px 0px 15px;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.product-wrapper{
+  height: 250px ;
+  width:  150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    border-bottom: 4px solid red;
+   
+    /* overflow: hidden;  */
+    
+    margin: 10px;
+    transition: 0.7s ease;
+    
+
+}
+.product-wrapper:hover{
+   transform: scale(1.1);
+}
+.product-img{
+  width: 150px;
+
+  
+}
+.product-img img{
+   width: 100%;
+   
+   border-radius: 15px 15px 0px 15px;
+}
+
+.product-info{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info h1{
+    width: 100%;
+    text-align: center;
+    color: #00c9a7;
+}
+.product-info strong{
+    width: 100%;
+    text-align: end;
+    padding-right: 10px;
+    color: #00c9a7;
+}
+
+/* Order List */
+.order-container{
+    width: 25%;
+    height:100%; 
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+}
+.order-container::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #00c9a7  
+}
+.order-info-container{
+    width: 100%;
+    height:100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.order-header{
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-header h1{
+  color: #00c9a7;
+  font-size: 20px;
+  font-weight: bold;
+}
+.order-box{
+    width: 100%;
+    height:90%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+
+.order-list{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    overflow-y:auto;
+    height: 60%;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+}
+
+.order-list ul {
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  margin-right: 10px;
+}
+
+ul li{
+    background-color: #00c9a7;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  transition: box-shadow 0.2s;
+  margin: 0px 0px;
+  padding: 5px 5px ;
+  margin: 5px 0px;
+}
+ul li:hover {
+  box-shadow: 0px 3px 5px #00c9a7;
+}
+.order-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.order-name {
+    color: #fff;
+  font-size: 1rem;
+}
+
+.order-price {
+  color: #fff;
+  font-size: 16px ;
+}
+
+.order-control {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding: 0px 10px;
+  padding-bottom: 5px;
+}
+.order-control button {
+    cursor: pointer;
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    padding: 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.order-control span {
+    color: #fff;
+    padding: 0px 2px;
+  }
+
+.order-list-payment-info{
+    width: 90%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+  .order-bill{
+    width: 100%;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+
+  }
+
+  .order-bill .sub-total, .tax{
+   
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .order-bill .total{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .order-bill .total::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #00c9a7
+  }
+  .order-bill .total .total-info{
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.order-payment{
+    width: 100%;
+    background-color: #00c9a7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 10px 0px ;
+}
+.order-payment button{
+    cursor: pointer;
+    width: 80%;
+    height: 50px;
+    background-color: #00c9a7;
+    color: #fff;
+    border: none;
+}
