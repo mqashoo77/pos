@@ -28,17 +28,17 @@ class Home extends Component {
 
   render() {
     if (this.state.islogout) {
-      return <Navigate to="/login" />;
+      return <Navigate to="/login" />; // no need for navigate, jsut set a token false
     }
     return (
       <React.Fragment>
-       
         <Layout signOut={this.signOut}></Layout>
-        <Navbar></Navbar>
         <main>
-          <PosPage>
-            
-          </PosPage>
+        <Routes>
+          <Route path="/" element={<PosPage />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/products" element={<ProductsPage />} />
+        </Routes>
         </main>
         
       </React.Fragment>
