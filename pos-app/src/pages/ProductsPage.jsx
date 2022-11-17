@@ -9,6 +9,7 @@ import ProductsTable from "../components/productsTable";
 import ProductPageModals from "../components/productPageModals.jsx";
 function ProductsPage() {
   const [products, setProducts] = useState([]);
+  const [pagProduct, setPagProduct] = useState([]);
   const [productFormPopModel, setProductFormPopModal] = useState(false);
   const [deleteProductConfirmPopModel, setDeleteProductConfirmPopModel] =
     useState(false);
@@ -16,7 +17,7 @@ function ProductsPage() {
     useState(false);
   const [productId, setProductId] = useState(false);
   const [categories, setCategories] = useState(null);
-  
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -36,6 +37,22 @@ function ProductsPage() {
     deleteProductConfirmPopModel,
     productDescriptionPopModal,
   ]);
+
+  function showProducts(flag) {
+    if (flag == 1) {
+      console.log(index);
+      let a = index + 2;
+      let pro = products.slice(a - 2, a);
+      setPagProduct(pro);
+      setIndex(a);
+    } else {
+      console.log(index);
+      let a = index - 2;
+      let pro = products.slice(a - 2, a);
+      setPagProduct(pro);
+      setIndex(a);
+    }
+  }
   const [productSearchValue, setProductSearchValue] = useState("");
   const [productsFilter, setProductsFilter] = useState([]);
   function search(e) {
@@ -72,7 +89,7 @@ function ProductsPage() {
       </div>
 
       <ProductsTable
-        products={products}
+        products={pagProduct}
         setProductFormPopModal={setProductFormPopModal}
         setDeleteProductConfirmPopModel={setDeleteProductConfirmPopModel}
         setProductDescriptionPopModal={setProductDescriptionPopModal}
@@ -80,6 +97,10 @@ function ProductsPage() {
         productsFilter={productsFilter}
         productSearchValue={productSearchValue}
       ></ProductsTable>
+      <div>
+        <button onClick={() => showProducts(0)}>Previous</button>
+        <button onClick={() => showProducts(1)}>Next</button>
+      </div>
       <ProductPageModals
         productFormPopModel={productFormPopModel}
         setProductFormPopModal={setProductFormPopModal}
