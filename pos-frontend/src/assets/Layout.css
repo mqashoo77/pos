@@ -1,7 +1,7 @@
 .aside-container{
     width: 80%;
     height: 96%;
-    background-color: #2c3e50;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,16 +18,16 @@
 }
 .nav-btn button{
     cursor: pointer;
-    background-color:#2c3e50;
     border: none;
     border-radius: 15px;   
     transition-duration: 0.5s ;
     padding: 10px;
     transform: 0.7s;
+    background-color: var(--background-color);
     
 }
-.nav-btn button span,h6{
-    color: #00c9a7;
+.nav-btn button, span,h6{
+    color: var(--third-color)
     
 }
 .nav-btn button:hover{
