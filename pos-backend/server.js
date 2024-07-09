@@ -73,6 +73,10 @@ app.get("/categories/:categoryId", async (req, res)=>{
       return res.json("error")
   }
 });
+
+app.use("/admins", require("./APIs/admins"));
+app.use("/login", require("./routes/login"));
+
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
