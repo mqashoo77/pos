@@ -21,20 +21,24 @@ This page contains all products, through which you can add a new product, modify
 
 **Client:** React
 
-**Server:** JSON server
+**Server:** Node.js server using Express
+
+**Databae:** MongoDB
 
 
 ## Installation
 
 ```bash
   git clone https://github.com/mqashoo77/pos-react-app.git
-  cd pos-app
-  npm start
+  cd pos-frontend
+  npm run start
 ```
 
-To run the server, in DB directory 
+To run the server
 ```bash
-   npx json-server --watch db.json
+   cd pos-backend
+   npm install
+   npm run start
 ```
     
 ## Note
