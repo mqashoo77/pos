@@ -5,9 +5,10 @@ import axios from "axios";
 //css
 import "../assets/ProductsPage.css";
 //Components
-import ProductsTable from "../components/productsTable";
+import ProductsTable from "../components/productsTable.jsx";
 import ProductPageModals from "../components/productPageModals.jsx";
-function ProductsPage() {
+
+const Products = () => {
   const [products, setProducts] = useState([]);
   const [pagProduct, setPagProduct] = useState([]);
   const [productFormPopModel, setProductFormPopModal] = useState(false);
@@ -18,15 +19,17 @@ function ProductsPage() {
   const [productId, setProductId] = useState(false);
   const [categories, setCategories] = useState(null);
   const [index, setIndex] = useState(0);
+  const [productSearchValue, setProductSearchValue] = useState("");
+  const [productsFilter, setProductsFilter] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get("http://127.0.0.1:3000/products/");
+      const { data } = await axios.get("http://127.0.0.1:5000/products/");
       setProducts(data);
     };
 
     const getCategories = async () => {
-      const { data } = await axios.get("http://127.0.0.1:3000/categories/");
+      const { data } = await axios.get("http://127.0.0.1:5000/categories/");
 
       setCategories(data);
     };
@@ -38,7 +41,7 @@ function ProductsPage() {
     productDescriptionPopModal,
   ]);
 
-  function showProducts(flag) {
+  const showProducts = (flag) => {
     if (flag == 1) {
       console.log(index);
       let a = index + 2;
@@ -52,10 +55,9 @@ function ProductsPage() {
       setPagProduct(pro);
       setIndex(a);
     }
-  }
-  const [productSearchValue, setProductSearchValue] = useState("");
-  const [productsFilter, setProductsFilter] = useState([]);
-  function search(e) {
+  };
+
+  const search = (e) => {
     if (e.target.value != "") {
       setProductSearchValue(e.target.value);
       const filterProducts = products.filter((o) =>
@@ -67,7 +69,8 @@ function ProductsPage() {
     } else {
       setProductSearchValue(e.target.value);
     }
-  }
+  };
+
   return (
     <div className="main-container">
       <div className="product-add-search">
@@ -115,6 +118,6 @@ function ProductsPage() {
       ></ProductPageModals>
     </div>
   );
-}
+};
 
-export default ProductsPage;
+export default Products;

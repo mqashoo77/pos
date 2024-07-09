@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 /////css
 import "../assets/Layout.css";
-import Categories from "./../pages/CategoriesPage";
+import Categories from "../pages/Categories";
 
 function Layout(props) {
   const navigate = useNavigate();

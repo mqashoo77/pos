@@ -2,14 +2,14 @@ import React from "react";
 import "../assets/posPage.css";
 import ProductItem from "../components/productItem.jsx";
 import OrderList from "../components/orderList.jsx";
-import OrderBill from "./../components/orderBill";
-import OrderPaymentProcess from "./../components/orderPaymentProcess";
+import OrderBill from "../components/orderBill.jsx";
+import OrderPaymentProcess from "../components/orderPaymentProcess.jsx";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CategoryCard from "../components/categoryCard.jsx";
 
-function PosPage() {
+const Dashboard = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectCategoty, setSelectCategoty] = useState("All");
@@ -136,4 +136,4 @@ function PosPage() {
   );
 }
 
-export default PosPage;
+export default Dashboard;
