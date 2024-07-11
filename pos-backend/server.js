@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -10,20 +11,15 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-const uri = 'mongodb+srv://mqashoo77:qashoO0333@cluster0.f4mcyrr.mongodb.net/pos-store?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGO_URI;
+console.log(uri);
+
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
-
-// mongoose.connect("mongodb+srv://mqashoo77:qashoO0333@cluster0.f4mcyrr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-// .then(()=>{
-//     console.log("connected successfully");
-// }).catch((error)=>{
-//     console.log("error with connected", error);
-// })
 const ProductModel = require('./models/products')
 const CategoryModel = require('./models/categories')
 
