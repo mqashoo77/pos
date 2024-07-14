@@ -28,6 +28,11 @@ This page contains all products, through which you can add a new product, modify
 
 ## Installation
 
+Clone This Repo
+```bash
+  git clone https://github.com/mqashoo77/pos-react-app.git
+```
+
 First You Need to run the server
 ```bash
    cd pos-backend
