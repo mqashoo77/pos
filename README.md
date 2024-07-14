@@ -43,7 +43,7 @@ To run the react app
   npm run start
 ```
 
-##Deployment
+## Deployment
 
 https://pos-frontend-pfop.onrender.com/login
     
