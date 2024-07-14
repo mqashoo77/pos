@@ -6,7 +6,7 @@ import OrderBill from "../components/orderBill.jsx";
 import OrderPaymentProcess from "../components/orderPaymentProcess.jsx";
 
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axiosInstance from '../utils/axiosInstance.js';
 import CategoryCard from "../components/categoryCard.jsx";
 
 const Dashboard = () => {
@@ -24,17 +24,26 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get("http://127.0.0.1:5000/products/");
-      setProducts(data);
+    const getProducts = async () => {
+      try{
+        const { data } = await axiosInstance.get('/products');
+        setProducts(data);
+        
+      }catch(err){
+        console.log(err);
+      }
     };
 
     const getCategories = async () => {
-      const { data } = await axios.get("http://127.0.0.1:5000/categories/");
+      try{
+        const { data } = await axiosInstance.get('/categories');
+        setCategories(data);
 
-      setCategories(data);
+      }catch(err){
+        console.log(err);
+      }
     };
-    getData();
+    getProducts();
     getCategories();
   }, []);
 

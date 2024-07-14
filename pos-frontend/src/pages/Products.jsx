@@ -1,16 +1,26 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 //css
 import "../assets/ProductsPage.css";
 //Components
 import ProductsTable from "../components/productsTable.jsx";
 import ProductPageModals from "../components/productPageModals.jsx";
+import axiosInstance from '../utils/axiosInstance.js';
+
 
 const Products = () => {
+
+  const numberOfItemInPag = 3
+  var from = 0
+  var to = numberOfItemInPag
+
+
   const [products, setProducts] = useState([]);
+  
   const [pagProduct, setPagProduct] = useState([]);
+  const [index, setIndex] = useState(0);
+
   const [productFormPopModel, setProductFormPopModal] = useState(false);
   const [deleteProductConfirmPopModel, setDeleteProductConfirmPopModel] =
     useState(false);
@@ -18,23 +28,40 @@ const Products = () => {
     useState(false);
   const [productId, setProductId] = useState(false);
   const [categories, setCategories] = useState(null);
-  const [index, setIndex] = useState(0);
+  
   const [productSearchValue, setProductSearchValue] = useState("");
   const [productsFilter, setProductsFilter] = useState([]);
 
+  const [isPreviousDisable, setIsPreviousDisable] = React.useState(true);
+  const [isNextDisable, setIsNextDisable] = React.useState(false);
+
+  // const [numberOfItemInPag, setNumberOfItemInPag] = React.useState(3);
+
+  
+
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get("http://127.0.0.1:5000/products/");
-      setProducts(data);
+    const getProducts = async () => {
+      try{
+        const { data } = await axiosInstance.get('/products');
+        setProducts(data);
+        
+      }catch(err){
+        console.log(err);
+      }
     };
 
     const getCategories = async () => {
-      const { data } = await axios.get("http://127.0.0.1:5000/categories/");
+      try{
+        const { data } = await axiosInstance.get('/categories');
+        setCategories(data);
 
-      setCategories(data);
+      }catch(err){
+        console.log(err);
+      }
     };
-    getData();
+    getProducts();
     getCategories();
+    // setPagProduct(products.slice(from, to))
   }, [
     productFormPopModel,
     deleteProductConfirmPopModel,
@@ -42,19 +69,7 @@ const Products = () => {
   ]);
 
   const showProducts = (flag) => {
-    if (flag == 1) {
-      console.log(index);
-      let a = index + 2;
-      let pro = products.slice(a - 2, a);
-      setPagProduct(pro);
-      setIndex(a);
-    } else {
-      console.log(index);
-      let a = index - 2;
-      let pro = products.slice(a - 2, a);
-      setPagProduct(pro);
-      setIndex(a);
-    }
+          
   };
 
   const search = (e) => {
@@ -92,7 +107,7 @@ const Products = () => {
       </div>
 
       <ProductsTable
-        products={pagProduct}
+        products={products}
         setProductFormPopModal={setProductFormPopModal}
         setDeleteProductConfirmPopModel={setDeleteProductConfirmPopModel}
         setProductDescriptionPopModal={setProductDescriptionPopModal}
@@ -101,8 +116,8 @@ const Products = () => {
         productSearchValue={productSearchValue}
       ></ProductsTable>
       <div>
-        <button onClick={() => showProducts(0)}>Previous</button>
-        <button onClick={() => showProducts(1)}>Next</button>
+      <button onClick={()=>showProducts(0)} disabled = {isPreviousDisable} style={{ cursor: isPreviousDisable ? 'not-allowed' : 'pointer' }}> Previous</button>
+      <button onClick={()=> showProducts(1)} disabled= {isNextDisable} style={{ cursor: isNextDisable ? 'not-allowed' : 'pointer' }}> Next</button>
       </div>
       <ProductPageModals
         productFormPopModel={productFormPopModel}

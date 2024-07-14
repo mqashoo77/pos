@@ -8,6 +8,8 @@ import CategoryForm from "../components/modals/categoryForm";
 import DeleteCategotyConfirmation from "../components/modals/deleteCategotyConfirmation";
 import CategoryTable from "../components/categoryTable";
 import PaginationTable from "../components/paginationTable";
+import axiosInstance from '../utils/axiosInstance.js';
+
 //css
 import "../assets/categoriesPage.css";
 import "../App.css";
@@ -19,21 +21,17 @@ function Categories() {
   const [editCategory, setEditCategory] = useState(false);
   const [deleteCategory, setDeleteCategory] = useState(false);
 
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [categoriesPerPage, setCategoriesPerPage] = useState(2);
-  // const iolc = currentPage * categoriesPerPage
-  // const iofc = iolc - categoriesPerPage;
-  // const currentCategories = categories.slice(iofc, iolc);
-  // const totalPagesNum = Math.ceil(categories.length / categoriesPerPage);
-
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get("http://127.0.0.1:3000/categories/");
-      setCategories(data);
-      ////////////////////TEST
-      // console.log(dataSource);
+    const getCategories = async () => {
+      try{
+        const { data } = await axiosInstance.get('/categories');
+        setCategories(data);
+
+      }catch(err){
+        console.log(err);
+      }
     };
-    getData();
+    getCategories();
   }, [popModel, deleteCategoryPopModel]);
 
   const [categorySearchValue, setCategorySearchValue] = useState("");
@@ -51,7 +49,6 @@ function Categories() {
       setTableFilter(filterTable);
     } else {
       setCategorySearchValue(e.target.value);
-      // setDataSource([...dataSource])
     }
   }
   return (
