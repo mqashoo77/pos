@@ -28,18 +28,24 @@ This page contains all products, through which you can add a new product, modify
 
 ## Installation
 
-```bash
-  git clone https://github.com/mqashoo77/pos-react-app.git
-  cd pos-frontend
-  npm run start
-```
-
-To run the server
+First You Need to run the server
 ```bash
    cd pos-backend
    npm install
-   npm run start
+   node server
 ```
+To run the react app
+
+```bash
+  git clone https://github.com/mqashoo77/pos-react-app.git
+  cd pos-frontend
+  npm install
+  npm run start
+```
+
+##Deployment
+
+https://pos-frontend-pfop.onrender.com/login
     
 ## Note
 - This project is a part of the [Foothill Solutions](https://www.foothillsolutions.com/) internship program.
