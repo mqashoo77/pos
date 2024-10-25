@@ -3,6 +3,7 @@ import "../assets/LoginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import axiosInstance from '../utils/axiosInstance';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -16,7 +17,7 @@ const Login = () => {
 
         try {
           
-            const response = await axios.post('http://localhost:5000/login/',
+            const response = await axiosInstance.post('/login',
                 JSON.stringify({ username, password }),
                 {
                     headers: { 'Content-Type': 'application/json' },
