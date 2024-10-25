@@ -50,7 +50,7 @@ To run the react app
 
 ## Deployment
 
-https://pos-frontend-pfop.onrender.com/login
+https://pos-frontend-pfop.onrender.com
     
 ## Note
 - This project is a part of the [Foothill Solutions](https://www.foothillsolutions.com/) internship program.
